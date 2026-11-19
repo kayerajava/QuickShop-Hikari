@@ -10,6 +10,9 @@ pluginManagement {
 
 dependencyResolutionManagement {
     repositories {
+        // Arkeil: the TNE repo (nexus.liggesmeyer.net) is down and fails every lookup, so it is removed;
+        // tnil-extract publishes TNIL/TNML to mavenLocal from the official 6.3.0.4 release jar
+        mavenLocal { content { includeGroup("net.tnemc") } }
         mavenCentral()
         exclusiveContent {
             forRepository {
@@ -39,8 +42,6 @@ dependencyResolutionManagement {
         maven("https://repo.spaceio.xyz/repository/maven-public/")
         maven("https://maven.enginehub.org/repo/")
         maven("https://maven.mohistmc.com/")
-        maven("https://nexus.liggesmeyer.net/repository/maven-releases/")
-        maven("https://nexus.liggesmeyer.net/repository/maven-snapshots/")
         maven("https://nexus.scarsz.me/content/groups/public/")
         maven("https://oss.sonatype.org/content/groups/public/")
         maven("https://oss.sonatype.org/content/repositories/snapshots")
@@ -54,7 +55,6 @@ dependencyResolutionManagement {
         maven("https://repo.codemc.org/repository/maven-public/")
         maven("https://repo.codemc.org/repository/maven-snapshots")
         maven("https://repo.crazycrew.us/releases")
-        maven("https://repo.dustplanet.de/artifactory/libs-release-local/")
         maven("https://repo.essentialsx.net/releases/")
         maven("https://repo.extendedclip.com/content/repositories/placeholderapi/")
         maven("https://repo.georgev22.com/releases")

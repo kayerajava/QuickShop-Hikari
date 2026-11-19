@@ -56,7 +56,7 @@ mojangapi-mirror: 0
 crowdin-host: "https://crowdinota.hikari.r2.quickshop-powered.top"
 
 # Use Crowdin OTA to automatically update language files.
-use-crowdin-ota: true
+use-crowdin-ota: false
 
 # Developer mode.
 # Advanced feature—only enable if you know why you need it.
@@ -217,7 +217,7 @@ logging:
 force-bukkit-chat-handler: false
 
 # Allow QuickShop to check for updates.
-updater: true
+updater: false
 
 # Source used for update checks.
 # Allowed values: "nexus", "modrinth"
